@@ -43,7 +43,7 @@ class CoinMcContainer
 	 * @param  string $currency 	Currency for convert (default - USD)
 	 * @return json            		All ticker object
 	 */
-	public static function ticker ($limit = false, $currency = false)
+	public static function ticker ($limit = false, $currency = false, $start = false)
 	{
 		$params = array();
 
@@ -52,6 +52,9 @@ class CoinMcContainer
 		}
 		if ($limit) {
 			$params['limit'] = $limit;
+		}
+		if ($start) {
+			$params['start'] = $start;
 		}
 
 		return self::makeRequest('ticker', $params);
