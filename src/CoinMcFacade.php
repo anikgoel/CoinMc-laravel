@@ -1,6 +1,6 @@
 <?php
 
-namespace Andskur\CoinMc;
+namespace Anik\CoinMc;
 
 use Illuminate\Support\Facades\Facade;
 

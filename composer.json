@@ -1,23 +1,23 @@
 {
-    "name": "andskur/coinmc",
-    "description": "CoinMarketCap.com api wrapper for Laravel 5.4",
+    "name": "anikgoel/coinmc",
+    "description": "CoinMarketCap.com api wrapper for Laravel 5.*",
     "keywords": ["laravel", "cryptocurrency", "coinmarketcap", "coinmarketcap.com", "bitcoin"] ,
-    "homepage": "https://github.com/andskur/CoinMc-laravel",
+    "homepage": "https://github.com/anikgoel/CoinMc-laravel",
     "license": "MIT",
     "authors": [
         {
-            "name": "Andrey Skurlatov",
-            "email": "a.skurlatov@gmail.com"
+            "name": "Anik Goel",
+            "email": "anikgoel19@gmail.com"
         }
     ],
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": ">=5.4.0",
+        "laravel/framework": "5.*",
         "guzzlehttp/guzzle": "^6.2"
     },
     "autoload": {
         "psr-4": {
-            "Andskur\\CoinMc\\": "src/"
+            "Anik\\CoinMc\\": "src/"
         }
     },
     "minimum-stability": "dev"
