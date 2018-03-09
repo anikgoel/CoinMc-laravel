@@ -3,7 +3,6 @@
 namespace Anik\CoinMc;
 
 use Illuminate\Support\ServiceProvider;
-use Anik\CoinMc\CoinMcContainer;
 
 class CoinMcServiceProvider extends ServiceProvider
 {
