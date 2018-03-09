@@ -20,7 +20,7 @@ class CoinMcContainer
 	 * @param  array  $params   Array of Get http parameters
 	 * @return json           	Return Json object
 	 */
-	private function makeRequest ($endpoint, $params = array())
+	private static function makeRequest ($endpoint, $params = array())
 	{
 		$client = new Client();
 
@@ -43,7 +43,7 @@ class CoinMcContainer
 	 * @param  string $currency 	Currency for convert (default - USD)
 	 * @return json            		All ticker object
 	 */
-	public function ticker ($limit = false, $currency = false)
+	public static function ticker ($limit = false, $currency = false)
 	{
 		$params = array();
 
@@ -54,7 +54,7 @@ class CoinMcContainer
 			$params['limit'] = $limit;
 		}
 
-		return $this->makeRequest('ticker', $params);
+		return self::makeRequest('ticker', $params);
 	}
 
 	/**
@@ -63,7 +63,7 @@ class CoinMcContainer
 	 * @param  string $currency 	Currency for convert (default - USD)
 	 * @return json           		Specific ticker object
 	 */
-	public function tickerCoin ($coin, $currency = false)
+	public static function tickerCoin ($coin, $currency = false)
 	{
 		$params = array();
 
@@ -71,7 +71,7 @@ class CoinMcContainer
 			$params['convert'] = $currency;
 		}
 
-		return $this->makeRequest('ticker/' . $coin, $params)[0];
+		return self::makeRequest('ticker/' . $coin, $params)[0];
 	}
 
 	/**
@@ -79,7 +79,7 @@ class CoinMcContainer
 	 * @param  string $currency 	Currency for convert (default - USD)
 	 * @return json              	Global data object
 	 */
-	public function globalData ($currency = false)
+	public static function globalData ($currency = false)
 	{
 		$params = array();
 
@@ -87,6 +87,6 @@ class CoinMcContainer
 			$params['convert'] = $currency;
 		}
 
-		return $this->makeRequest('global', $params);
+		return self::makeRequest('global', $params);
 	}
 }
